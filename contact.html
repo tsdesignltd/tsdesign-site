@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACT | TSDESIGN</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20260618-works-mobile2">
+<style>
+body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;}
+.page-wrap{max-width:980px;margin:0 auto;padding:100px 32px 120px;}
+.page-title{font-size:64px;line-height:1;margin:0 0 18px;letter-spacing:.03em;}
+.page-lead{font-size:17px;line-height:1.9;color:#5e645d;max-width:720px;margin:0 0 54px;}
+.contact-panel{background:#fff;border-radius:28px;padding:42px;box-shadow:0 8px 28px rgba(0,0,0,.04);}
+.contact-list{display:grid;grid-template-columns:150px 1fr;gap:20px 30px;margin:0;}
+.contact-list dt{color:#79bc3d;font-weight:800;letter-spacing:.08em;}
+.contact-list dd{margin:0;color:#5e645d;line-height:1.8;}
+.contact-list a{color:inherit;text-decoration:underline;text-underline-offset:3px;}
+.contact-address{display:inline-block;margin-right:16px;}
+.map-button{display:inline-flex;align-items:center;justify-content:center;padding:7px 13px;border:1px solid #79bc3d;border-radius:999px;color:#79bc3d!important;text-decoration:none!important;font-size:12px;font-weight:700;letter-spacing:.06em;white-space:nowrap;}
+.map-button:hover{background:#79bc3d;color:#fff!important;}
+@media(max-width:760px){.contact-address{display:block;margin-right:0;margin-bottom:10px;}.page-wrap{padding:64px 20px 88px;}.page-title{font-size:44px;}.contact-panel{padding:28px 22px;}.contact-list{grid-template-columns:1fr;gap:8px;}.contact-list dd{margin-bottom:14px;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-logo" href="index.html">
+      <img src="assets/img/logo.png?v=20260618-2113" alt="TSDESIGN">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="メニュー"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="works.html">WORKS</a>
+      <a href="flow.html">FLOW</a>
+      <a href="profile.html">PROFILE</a>
+      <a class="nav-contact" href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+<main class="page-wrap">
+<h1 class="page-title">CONTACT</h1>
+<p class="page-lead">デザイン開発、製品設計、メーカー化支援など、お気軽にお問い合わせください。</p>
+<section class="contact-panel">
+<dl class="contact-list">
+<dt>住所</dt><dd><span class="contact-address">〒194-0032 東京都町田市本町田1833-4</span><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=%E3%80%92194-0032%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%94%BA%E7%94%B0%E5%B8%82%E6%9C%AC%E7%94%BA%E7%94%B01833-4" target="_blank" rel="noopener">Google Map</a></dd>
+<dt>電話番号</dt><dd>042-703-4933</dd>
+<dt>FAX番号</dt><dd>042-633-0275</dd>
+<dt>e-mail</dt><dd><a href="mailto:tsdesign.ltd@gmail.com">tsdesign.ltd@gmail.com</a></dd>
+</dl>
+</section>
+</main>
+<script data-mobile-menu-script>
+document.addEventListener('DOMContentLoaded', function(){
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>

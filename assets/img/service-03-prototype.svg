@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="400" height="240" fill="#f0f4eb"/>
+  <rect x="58" y="48" width="138" height="116" rx="18" fill="#fff" stroke="#d8e5cc" stroke-width="2"/>
+  <rect x="88" y="78" width="78" height="56" rx="12" fill="#e8f4d8" stroke="#79bc3d" stroke-width="3"/>
+  <circle cx="127" cy="106" r="15" fill="#79bc3d" opacity=".75"/>
+  <path d="M79 178h98" stroke="#79bc3d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M230 52h44a36 36 0 0 1 36 36v8h-38V86a8 8 0 0 0-8-8h-34V52Z" fill="#fff" stroke="#79bc3d" stroke-width="3"/>
+  <path d="M230 52v136M310 96v92" stroke="#79bc3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M230 188h80" stroke="#79bc3d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M248 142h44M248 160h28" stroke="#c8d8b8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M208 86l-20 20 20 20M330 86l20 20-20 20" stroke="#79bc3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="81" y="206" fill="#79bc3d" font-family="Arial, sans-serif" font-size="13" font-weight="700">MODEL</text>
+  <text x="238" y="206" fill="#79bc3d" font-family="Arial, sans-serif" font-size="13" font-weight="700">TEST</text>
+</svg>

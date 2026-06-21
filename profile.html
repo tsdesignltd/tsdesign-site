@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROFILE | TSDESIGN</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20260618-works-mobile2">
+<style>
+body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;}
+.page-wrap{max-width:1180px;margin:0 auto;padding:100px 32px 120px;}
+.page-title{font-size:64px;line-height:1;margin:0 0 18px;letter-spacing:.03em;}
+.page-lead{font-size:17px;line-height:1.9;color:#5e645d;max-width:760px;margin:0 0 54px;}
+.profile-panel{display:grid;grid-template-columns:.7fr 1.3fr;gap:46px;background:#fff;border-radius:28px;padding:42px;box-shadow:0 8px 28px rgba(0,0,0,.04);}
+.profile-panel h2{font-size:34px;line-height:1.35;margin:0;}
+.profile-table{display:grid;grid-template-columns:130px 1fr;gap:18px 28px;margin:0;}
+.profile-table dt{color:#79bc3d;font-weight:800;letter-spacing:.06em;}
+.profile-table dd{margin:0;color:#5e645d;line-height:1.8;}
+.profile-table a{color:inherit;text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:820px){.page-wrap{padding:64px 20px 88px;}.page-title{font-size:44px;}.profile-panel{grid-template-columns:1fr;padding:28px 22px;}.profile-panel h2{font-size:28px;}.profile-table{grid-template-columns:1fr;gap:8px;}.profile-table dd{margin-bottom:12px;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-logo" href="index.html">
+      <img src="assets/img/logo.png?v=20260618-2113" alt="TSDESIGN">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="メニュー"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="works.html">WORKS</a>
+      <a href="flow.html">FLOW</a>
+      <a href="profile.html">PROFILE</a>
+      <a class="nav-contact" href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+<main class="page-wrap">
+<h1 class="page-title">PROFILE</h1>
+<p class="page-lead">有限会社TSDESIGNは、工業製品のデザインと設計を中心に、企画から量産・ブランド化までを支援するデザインスタジオです。</p>
+<section class="profile-panel">
+<div><p class="eyebrow">COMPANY</p><h2>有限会社TSDESIGN</h2></div>
+<dl class="profile-table">
+<dt>所在地</dt><dd>〒194-0032 東京都町田市本町田1833-4</dd>
+<dt>設立</dt><dd>2002年12月</dd>
+<dt>資本金</dt><dd>300万円</dd>
+<dt>代表者</dt><dd>角南健夫</dd>
+<dt>業務内容</dt><dd>工業製品のデザインと設計 / 広告物のデザインと製作 / アウトドア用品の製造販売 / デザインライセンス事業</dd>
+<dt>お問い合わせ</dt><dd><a href="mailto:tsdesign.ltd@gmail.com">tsdesign.ltd@gmail.com</a></dd>
+</dl>
+</section>
+</main>
+<script data-mobile-menu-script>
+document.addEventListener('DOMContentLoaded', function(){
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLOW | TSDESIGN</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20260618-works-mobile2">
+<style>
+body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;}
+.page-wrap{max-width:1180px;margin:0 auto;padding:100px 32px 120px;}
+.page-title{font-size:64px;line-height:1;margin:0 0 18px;letter-spacing:.03em;}
+.page-lead{font-size:17px;line-height:1.9;color:#5e645d;max-width:760px;margin:0 0 54px;}
+.flow-list{counter-reset:item;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;list-style:none;margin:0;padding:0;}
+.flow-list li{background:#fff;border:1px solid #e3e6df;border-radius:26px;padding:28px;min-height:220px;box-shadow:0 8px 28px rgba(0,0,0,.04);}
+.flow-list li:before{counter-increment:item;content:"0" counter(item);display:block;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.14em;margin-bottom:26px;}
+.flow-list b{display:block;font-size:24px;line-height:1.35;margin-bottom:12px;}
+.flow-list span{display:block;font-size:14px;line-height:1.9;color:#5e645d;}
+@media(max-width:1000px){.flow-list{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.page-wrap{padding:64px 20px 88px;}.page-title{font-size:44px;}.flow-list{grid-template-columns:1fr;gap:16px;}.flow-list li{min-height:auto;padding:24px 22px;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-logo" href="index.html">
+      <img src="assets/img/logo.png?v=20260618-2113" alt="TSDESIGN">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="メニュー"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="works.html">WORKS</a>
+      <a href="flow.html">FLOW</a>
+      <a href="profile.html">PROFILE</a>
+      <a class="nav-contact" href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+<main class="page-wrap">
+<h1 class="page-title">FLOW</h1>
+<p class="page-lead">ご相談から企画、デザイン、試作、量産立ち上げ、メーカー化まで、目的と条件を整理しながら商品化に向けて進めます。</p>
+<ol class="flow-list">
+<li><b>相談</b><span>課題・目的・条件を整理し、開発に必要な前提を共有します。</span></li>
+<li><b>企画</b><span>使う人、売る場面、製造条件を踏まえ、方向性と仕様を設計します。</span></li>
+<li><b>デザイン</b><span>企画を具現化した、造形・機能・構造を、生産要件とコストを想定してデザイン案へ落とし込みます。</span></li>
+<li><b>試作</b><span>試作設計、試作製作を通じて、デザインの検証、調整を行い量産に向けて完成度を高めます。</span></li>
+<li><b>量産立ち上げ</b><span>工場の選定と調整、量産設計、コスト確認、品質確認を行い、量産化を進めます。</span></li>
+<li><b>メーカー化</b><span>ブランド構築、商品展開、販売導線づくりまで、自社で商品を販売する体制づくりを支援します。</span></li>
+</ol>
+</main>
+<script data-mobile-menu-script>
+document.addEventListener('DOMContentLoaded', function(){
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>

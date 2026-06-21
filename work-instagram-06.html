@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電動アシスト自転車 | TSDESIGN</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+body{margin:0;background:#f4f5f1;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;color:#111815;}
+.detail-wrap{max-width:1280px;margin:0 auto;padding:90px 32px 110px;}
+.detail-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);gap:54px;align-items:start;}
+.detail-gallery{position:relative;background:#eef0eb;border-radius:28px;overflow:hidden;box-shadow:0 18px 52px rgba(0,0,0,.08);}
+.detail-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.detail-track::-webkit-scrollbar{display:none;}
+.detail-slide{flex:0 0 100%;scroll-snap-align:start;}
+.detail-slide img{width:100%;height:auto;display:block;}
+.detail-gallery-button{position:absolute;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:0;border-radius:999px;background:rgba(255,255,255,.92);color:#111815;font-size:30px;line-height:1;box-shadow:0 8px 20px rgba(0,0,0,.12);cursor:pointer;transform:translateY(-50%);}
+.detail-gallery-button.prev{left:14px;}
+.detail-gallery-button.next{right:14px;}
+.detail-gallery-dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px;}
+.detail-gallery-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.68);box-shadow:0 1px 5px rgba(0,0,0,.18);}
+.detail-gallery-dots button.is-current{width:22px;background:#79bc3d;}
+.detail-meta{color:#79bc3d;font-size:12px;font-weight:700;letter-spacing:.14em;margin:0 0 18px;}
+.detail-title{font-size:clamp(27px,3.33vw,45px);line-height:1.18;letter-spacing:.03em;margin:0 0 26px;}
+.detail-summary{background:#fff;border-radius:26px;padding:28px 30px;box-shadow:0 8px 28px rgba(0,0,0,.05);}
+.detail-summary h2{font-size:18px;margin:0 0 14px;}
+.detail-roles{margin:0 0 24px;padding:0;list-style:none;color:#5e645d;font-size:15px;line-height:1.9;}
+.detail-roles li{margin:0 0 4px;}
+.detail-roles li::before{content:"・";color:#ef6c00;margin-right:4px;}
+.detail-caption{font-size:15px;line-height:1.9;color:#5e645d;}
+.detail-caption p{margin:0 0 8px;}
+.detail-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}
+.detail-button{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:12px 18px;border-radius:999px;border:1px solid #79bc3d;background:#79bc3d;color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;}
+.detail-button.secondary{background:transparent;color:#79bc3d;}
+@media(max-width:900px){.detail-wrap{padding:56px 20px 80px;}.detail-grid{grid-template-columns:1fr;gap:30px;}.detail-summary{padding:24px 20px;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="site-header__inner">
+<a class="site-logo" href="index.html">
+<img src="assets/img/logo.png" alt="TSDESIGN">
+</a>
+
+<button class="nav-toggle" type="button" aria-label="メニュー">
+<span></span><span></span><span></span>
+</button>
+
+<nav class="site-nav">
+<a href="about.html">ABOUT</a>
+<a href="service.html">SERVICE</a>
+<a href="works.html">WORKS</a>
+<a href="flow.html">FLOW</a>
+<a href="profile.html">PROFILE</a>
+<a class="nav-contact" href="contact.html">CONTACT</a>
+</nav>
+</div>
+</header>
+
+<main class="detail-wrap">
+<div class="detail-grid">
+<div class="detail-gallery" data-gallery>
+<div class="detail-track">
+<div class="detail-slide"><img src="assets/img/works-instagram/tsdesignltd-06-01.jpg" alt="電動アシスト自転車"></div>
+</div>
+
+</div>
+<div>
+<p class="detail-meta">2007年　無印良品</p>
+<h1 class="detail-title">電動アシスト自転車</h1>
+<div class="detail-summary">
+<h2>担当領域</h2>
+<ul class="detail-roles">
+<li>外観デザイン</li>
+<li>基礎設計</li>
+</ul>
+
+<div class="detail-actions">
+<a class="detail-button secondary" href="works.html">WORKS一覧</a>
+<a class="detail-button" href="https://www.instagram.com/p/DZTrOHIkyKj/" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const btn=document.querySelector('.nav-toggle');
+  const nav=document.querySelector('.site-nav');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      btn.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        btn.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+  document.querySelectorAll('[data-gallery]').forEach(function(gallery){
+    const track=gallery.querySelector('.detail-track');
+    const slides=Array.from(gallery.querySelectorAll('.detail-slide'));
+    const dots=Array.from(gallery.querySelectorAll('.detail-gallery-dots button'));
+    const prev=gallery.querySelector('.detail-gallery-button.prev');
+    const next=gallery.querySelector('.detail-gallery-button.next');
+    if(!track||slides.length<2) return;
+    let current=0;
+    function show(index){
+      current=(index+slides.length)%slides.length;
+      track.scrollTo({left:slides[current].offsetLeft,behavior:'smooth'});
+      dots.forEach(function(dot,i){dot.classList.toggle('is-current',i===current);});
+    }
+    if(prev) prev.addEventListener('click',function(){show(current-1);});
+    if(next) next.addEventListener('click',function(){show(current+1);});
+    dots.forEach(function(dot,i){dot.addEventListener('click',function(){show(i);});});
+    track.addEventListener('scroll',function(){
+      const nextIndex=Math.round(track.scrollLeft/track.clientWidth);
+      if(nextIndex!==current&&slides[nextIndex]){
+        current=nextIndex;
+        dots.forEach(function(dot,i){dot.classList.toggle('is-current',i===current);});
+      }
+    },{passive:true});
+  });
+});
+</script>
+
+</body>
+</html>

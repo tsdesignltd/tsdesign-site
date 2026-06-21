@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="400" height="240" fill="#f0f4eb"/>
+  <rect x="62" y="64" width="112" height="118" rx="14" fill="#fff" stroke="#79bc3d" stroke-width="3"/>
+  <path d="M84 92h68M84 116h48M84 140h62" stroke="#d8e5cc" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="144" cy="158" r="14" fill="#79bc3d" opacity=".85"/>
+  <path d="M214 82h96l20 26v76H214V82Z" fill="#fff" stroke="#d8e5cc" stroke-width="2"/>
+  <path d="M310 82v26h20" stroke="#d8e5cc" stroke-width="2"/>
+  <rect x="232" y="110" width="74" height="38" rx="8" fill="#e8f4d8" stroke="#79bc3d" stroke-width="3"/>
+  <path d="M248 130h42" stroke="#79bc3d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M234 184h80" stroke="#79bc3d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M186 114c15-22 38-34 66-34M238 54l18 26-31 3" stroke="#79bc3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="84" y="48" fill="#79bc3d" font-family="Arial, sans-serif" font-size="14" font-weight="700">BRAND</text>
+  <text x="242" y="204" fill="#79bc3d" font-family="Arial, sans-serif" font-size="14" font-weight="700">SALES</text>
+</svg>
