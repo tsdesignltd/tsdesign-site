@@ -8,16 +8,9 @@
 <link rel="stylesheet" href="assets/css/style.css?v=20260618-works-mobile2">
 <style>
 body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;}
-.note-wrap{max-width:1120px;margin:0 auto;padding:86px 24px 110px;}
-.creator-cover{height:220px;border-radius:0 0 28px 28px;background:linear-gradient(135deg,#eff7e8 0%,#fff 58%,#e7f2df 100%);border:1px solid #e3e8df;border-top:0;overflow:hidden;position:relative;}
-.creator-cover:after{content:"TSDESIGN NOTE";position:absolute;right:34px;bottom:24px;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.18em;}
-.creator-profile{display:flex;align-items:flex-end;gap:22px;margin:-44px 0 28px;padding:0 18px;position:relative;z-index:1;}
-.creator-avatar{width:104px;height:104px;border-radius:50%;background:#fff;border:5px solid #f4f5f1;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.08);}
-.creator-avatar img{width:66px;height:auto;display:block;}
-.creator-main{padding:0 0 8px;}
-.creator-label{margin:0 0 6px;color:#79bc3d;font-size:12px;font-weight:800;letter-spacing:.14em;}
-.creator-name{font-size:36px;line-height:1.25;margin:0 0 8px;font-weight:700;}
-.creator-bio{margin:0;color:#5e645d;font-size:15px;line-height:1.8;max-width:760px;}
+.note-wrap{max-width:1180px;margin:0 auto;padding:100px 32px 120px;}
+.note-title{font-size:64px;line-height:1;margin:0 0 36px;letter-spacing:.03em;}
+.note-lead{font-size:18px;line-height:2;color:#5e645d;max-width:980px;margin:0 0 54px;font-weight:600;}
 .note-tabs{display:flex;gap:26px;border-bottom:1px solid #dfe5dc;margin:0 0 34px;padding:0 4px;}
 .note-tabs a{padding:14px 0 13px;font-size:13px;font-weight:800;letter-spacing:.12em;color:#5e645d;}
 .note-tabs a.is-active{color:#111815;border-bottom:2px solid #79bc3d;}
@@ -34,8 +27,8 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
 .side-card p{margin:0;color:#5e645d;font-size:14px;line-height:1.9;}
 .side-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;color:#5e645d;font-size:14px;}
 .side-list li:before{content:"・";color:#ef6c00;margin-right:4px;}
-@media(max-width:900px){.note-layout{grid-template-columns:1fr;}.creator-cover{height:170px;}.note-post{grid-template-columns:1fr;}.note-post__thumb{min-height:90px;}.note-side{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:640px){.note-wrap{padding:62px 18px 88px;}.creator-cover{height:138px;border-radius:0 0 22px 22px;}.creator-cover:after{right:20px;bottom:18px;font-size:11px;}.creator-profile{align-items:flex-start;margin:-34px 0 24px;padding:0 4px;}.creator-avatar{width:82px;height:82px;border-width:4px;flex:0 0 82px;}.creator-avatar img{width:50px;}.creator-name{font-size:27px;}.creator-bio{font-size:14px;}.note-tabs{gap:20px;overflow-x:auto;}.note-post{padding:22px 20px;border-radius:16px;gap:18px;}.note-post h2{font-size:21px;}.note-side{grid-template-columns:1fr;}}
+@media(max-width:900px){.note-layout{grid-template-columns:1fr;}.note-post{grid-template-columns:1fr;}.note-post__thumb{min-height:90px;}.note-side{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.note-wrap{padding:64px 20px 88px;}.note-title{font-size:44px;margin-bottom:24px;}.note-lead{font-size:16px;margin-bottom:38px;}.note-tabs{gap:20px;overflow-x:auto;}.note-post{padding:22px 20px;border-radius:16px;gap:18px;}.note-post h2{font-size:21px;}.note-side{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -56,16 +49,8 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
   </div>
 </header>
 <main class="note-wrap">
-<section class="creator-cover" aria-label="TSDESIGN NOTE"></section>
-
-<section class="creator-profile">
-  <div class="creator-avatar"><img src="assets/img/favicon.png" alt="TSDESIGN"></div>
-  <div class="creator-main">
-    <p class="creator-label">CREATOR</p>
-    <h1 class="creator-name">角南健夫 / TSDESIGN</h1>
-    <p class="creator-bio">商品開発の現場で考えたこと、うまくいったこと、迷ったこと。実際の経験をもとに、ものづくりの視点を記録していきます。</p>
-  </div>
-</section>
+<h1 class="note-title">NOTE</h1>
+<p class="note-lead">商品開発の現場で考えたこと、うまくいったこと、迷ったこと。実際の経験をもとに、ものづくりの視点を記録していきます。</p>
 
 <nav class="note-tabs" aria-label="NOTE categories">
   <a class="is-active" href="#">すべて</a>
