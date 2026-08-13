@@ -13,11 +13,13 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
 .note-lead{font-size:18px;line-height:2;color:#5e645d;max-width:980px;margin:0 0 54px;font-weight:600;}
 .note-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;align-items:start;}
 .note-feed{display:grid;gap:16px;}
-.note-post{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:24px;box-shadow:0 8px 24px rgba(0,0,0,.035);}
+.note-post{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:24px;box-shadow:0 8px 24px rgba(0,0,0,.035);transition:transform .2s ease,box-shadow .2s ease;}
+.note-post:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.06);}
 .note-post__date{margin:0 0 12px;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.08em;}
 .note-post h2{font-size:25px;line-height:1.45;margin:0 0 10px;}
-.note-post p{margin:0;color:#5e645d;font-size:14px;line-height:1.9;}
-.note-post__thumb{border-radius:14px;background:#edf5e7;min-height:112px;display:flex;align-items:center;justify-content:center;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.14em;}
+.note-post__more{display:inline-flex;margin-top:16px;color:#79bc3d;font-size:12px;font-weight:800;letter-spacing:.12em;}
+.note-post__thumb{border-radius:14px;background:#edf5e7;min-height:112px;overflow:hidden;}
+.note-post__thumb img{width:100%;height:100%;min-height:112px;object-fit:cover;display:block;}
 .note-side{display:grid;gap:16px;}
 .side-card{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.03);}
 .side-card h2{font-size:18px;margin:0 0 12px;}
@@ -49,30 +51,70 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
 
 <div class="note-layout">
   <section class="note-feed" aria-label="記事一覧">
-    <article class="note-post">
+    <a class="note-post" href="https://note.com/sunadx/n/n1abd2c99e11d" target="_blank" rel="noopener">
       <div>
-        <p class="note-post__date">2026.08.08</p>
-        <h2>アイデアを製品に近づけるときに考えていること</h2>
-        <p>思いつきのままでは商品にならないアイデアを、使う人、売る場所、作り方の条件から整理していく過程について。</p>
+        <p class="note-post__date">2021.04.29</p>
+        <h2>ロイヤリティ契約の光と影</h2>
+        <span class="note-post__more">noteで読む</span>
       </div>
-      <div class="note-post__thumb">NOTE</div>
-    </article>
-    <article class="note-post">
+      <div class="note-post__thumb"><img src="assets/img/note/note-01.png" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/nebdec84b3447" target="_blank" rel="noopener">
       <div>
-        <p class="note-post__date">2026.08.08</p>
-        <h2>デザインと設計のあいだで起きる判断</h2>
-        <p>見た目の良さだけでなく、材料、構造、コスト、量産性まで含めてデザインを成立させるための考え方について。</p>
+        <p class="note-post__date">2020.06.26</p>
+        <h2>BtoC自社ブランド商品を発売するまで</h2>
+        <span class="note-post__more">noteで読む</span>
       </div>
-      <div class="note-post__thumb">NOTE</div>
-    </article>
-    <article class="note-post">
+      <div class="note-post__thumb"><img src="assets/img/note/note-02.jpg" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/n42a21f04bd06" target="_blank" rel="noopener">
       <div>
-        <p class="note-post__date">2026.08.08</p>
-        <h2>試作から量産へ進むときに見ていること</h2>
-        <p>試作品で見えてくる課題をどう整理し、量産に向けてどこを調整していくのか。現場での確認ポイントについて。</p>
+        <p class="note-post__date">2020.05.20</p>
+        <h2>工業デザイン業 8つのポイント</h2>
+        <span class="note-post__more">noteで読む</span>
       </div>
-      <div class="note-post__thumb">NOTE</div>
-    </article>
+      <div class="note-post__thumb"><img src="assets/img/note/note-03.jpg" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/n7a779caacab5" target="_blank" rel="noopener">
+      <div>
+        <p class="note-post__date">2020.03.04</p>
+        <h2>デザイン料の決め方、決められ方</h2>
+        <span class="note-post__more">noteで読む</span>
+      </div>
+      <div class="note-post__thumb"><img src="assets/img/note/note-04.jpg" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/n4a447cda722a" target="_blank" rel="noopener">
+      <div>
+        <p class="note-post__date">2019.12.30</p>
+        <h2>売場は釣り場、O課長の達人ワザ</h2>
+        <span class="note-post__more">noteで読む</span>
+      </div>
+      <div class="note-post__thumb"><img src="assets/img/note/note-05.jpg" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/n2b62420060af" target="_blank" rel="noopener">
+      <div>
+        <p class="note-post__date">2019.12.15</p>
+        <h2>IT技術者のためのハードウェア用語集</h2>
+        <span class="note-post__more">noteで読む</span>
+      </div>
+      <div class="note-post__thumb"><img src="assets/img/note/note-06.jpg" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/n7c3aea6b3b7c" target="_blank" rel="noopener">
+      <div>
+        <p class="note-post__date">2019.12.09</p>
+        <h2>涙のキーボードと恐怖のグラフィックデザイナー</h2>
+        <span class="note-post__more">noteで読む</span>
+      </div>
+      <div class="note-post__thumb"><img src="assets/img/note/note-07.jpg" alt=""></div>
+    </a>
+    <a class="note-post" href="https://note.com/sunadx/n/n212c35bf7c59" target="_blank" rel="noopener">
+      <div>
+        <p class="note-post__date">2019.12.04</p>
+        <h2>デザインワークと中国クライアント</h2>
+        <span class="note-post__more">noteで読む</span>
+      </div>
+      <div class="note-post__thumb"><img src="assets/img/note/note-08.jpg" alt=""></div>
+    </a>
   </section>
 
   <aside class="note-side" aria-label="プロフィール">
