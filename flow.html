@@ -8,19 +8,34 @@
 <link rel="stylesheet" href="assets/css/style.css?v=20260618-works-mobile2">
 <style>
 body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;}
-.page-wrap{max-width:1180px;margin:0 auto;padding:100px 32px 120px;}
-.page-title{font-size:64px;line-height:1;margin:0 0 18px;letter-spacing:.03em;}
-.page-lead{font-size:17px;line-height:1.9;color:#5e645d;max-width:760px;margin:0 0 46px;}
-.note-intro{background:#fff;border:1px solid #e3e6df;border-radius:28px;padding:34px 38px;margin-bottom:28px;box-shadow:0 8px 28px rgba(0,0,0,.04);}
-.note-intro h2{font-size:30px;line-height:1.45;margin:0 0 14px;font-weight:600;}
-.note-intro p{margin:0;color:#5e645d;font-size:16px;line-height:2;}
-.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
-.note-card{display:block;background:#fff;border:1px solid #e3e6df;border-radius:26px;padding:28px;min-height:260px;box-shadow:0 8px 28px rgba(0,0,0,.04);}
-.note-date{display:block;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.14em;margin-bottom:22px;}
-.note-card h2{font-size:24px;line-height:1.45;margin:0 0 14px;}
-.note-card p{font-size:14px;line-height:1.9;color:#5e645d;margin:0;}
-@media(max-width:1000px){.note-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:640px){.page-wrap{padding:64px 20px 88px;}.page-title{font-size:44px;}.note-intro{padding:26px 22px;border-radius:22px;}.note-intro h2{font-size:25px;}.note-grid{grid-template-columns:1fr;gap:16px;}.note-card{min-height:auto;padding:24px 22px;}}
+.note-wrap{max-width:1120px;margin:0 auto;padding:86px 24px 110px;}
+.creator-cover{height:220px;border-radius:0 0 28px 28px;background:linear-gradient(135deg,#eff7e8 0%,#fff 58%,#e7f2df 100%);border:1px solid #e3e8df;border-top:0;overflow:hidden;position:relative;}
+.creator-cover:after{content:"TSDESIGN NOTE";position:absolute;right:34px;bottom:24px;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.18em;}
+.creator-profile{display:flex;align-items:flex-end;gap:22px;margin:-44px 0 28px;padding:0 18px;position:relative;z-index:1;}
+.creator-avatar{width:104px;height:104px;border-radius:50%;background:#fff;border:5px solid #f4f5f1;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.08);}
+.creator-avatar img{width:66px;height:auto;display:block;}
+.creator-main{padding:0 0 8px;}
+.creator-label{margin:0 0 6px;color:#79bc3d;font-size:12px;font-weight:800;letter-spacing:.14em;}
+.creator-name{font-size:36px;line-height:1.25;margin:0 0 8px;font-weight:700;}
+.creator-bio{margin:0;color:#5e645d;font-size:15px;line-height:1.8;max-width:760px;}
+.note-tabs{display:flex;gap:26px;border-bottom:1px solid #dfe5dc;margin:0 0 34px;padding:0 4px;}
+.note-tabs a{padding:14px 0 13px;font-size:13px;font-weight:800;letter-spacing:.12em;color:#5e645d;}
+.note-tabs a.is-active{color:#111815;border-bottom:2px solid #79bc3d;}
+.note-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;align-items:start;}
+.note-feed{display:grid;gap:16px;}
+.note-post{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:24px;box-shadow:0 8px 24px rgba(0,0,0,.035);}
+.note-post__tag{margin:0 0 12px;color:#79bc3d;font-size:12px;font-weight:800;letter-spacing:.14em;}
+.note-post h2{font-size:25px;line-height:1.45;margin:0 0 10px;}
+.note-post p{margin:0;color:#5e645d;font-size:14px;line-height:1.9;}
+.note-post__thumb{border-radius:14px;background:#edf5e7;min-height:112px;display:flex;align-items:center;justify-content:center;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.14em;}
+.note-side{display:grid;gap:16px;}
+.side-card{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.03);}
+.side-card h2{font-size:18px;margin:0 0 12px;}
+.side-card p{margin:0;color:#5e645d;font-size:14px;line-height:1.9;}
+.side-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;color:#5e645d;font-size:14px;}
+.side-list li:before{content:"・";color:#ef6c00;margin-right:4px;}
+@media(max-width:900px){.note-layout{grid-template-columns:1fr;}.creator-cover{height:170px;}.note-post{grid-template-columns:1fr;}.note-post__thumb{min-height:90px;}.note-side{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.note-wrap{padding:62px 18px 88px;}.creator-cover{height:138px;border-radius:0 0 22px 22px;}.creator-cover:after{right:20px;bottom:18px;font-size:11px;}.creator-profile{align-items:flex-start;margin:-34px 0 24px;padding:0 4px;}.creator-avatar{width:82px;height:82px;border-width:4px;flex:0 0 82px;}.creator-avatar img{width:50px;}.creator-name{font-size:27px;}.creator-bio{font-size:14px;}.note-tabs{gap:20px;overflow-x:auto;}.note-post{padding:22px 20px;border-radius:16px;gap:18px;}.note-post h2{font-size:21px;}.note-side{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -40,34 +55,68 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
     </nav>
   </div>
 </header>
-<main class="page-wrap">
-<h1 class="page-title">NOTE</h1>
-<p class="page-lead">商品開発の現場で考えたこと、うまくいったこと、迷ったこと。代表・角南健夫が、実際の経験をもとにものづくりの視点を記録していきます。</p>
+<main class="note-wrap">
+<section class="creator-cover" aria-label="TSDESIGN NOTE"></section>
 
-<section class="note-intro">
-  <h2>現場で得た気づきを、次のものづくりへ。</h2>
-  <p>
-    TSDESIGNでは、アイデアを形にする過程で、デザイン・設計・試作・量産・販売のあいだを行き来しながら判断しています。
-    NOTEでは、その中で見えてきた考え方や、商品開発を進めるうえで大切にしている視点を紹介します。
-  </p>
+<section class="creator-profile">
+  <div class="creator-avatar"><img src="assets/img/favicon.png" alt="TSDESIGN"></div>
+  <div class="creator-main">
+    <p class="creator-label">CREATOR</p>
+    <h1 class="creator-name">角南健夫 / TSDESIGN</h1>
+    <p class="creator-bio">商品開発の現場で考えたこと、うまくいったこと、迷ったこと。実際の経験をもとに、ものづくりの視点を記録していきます。</p>
+  </div>
 </section>
 
-<div class="note-grid">
-  <article class="note-card">
-    <span class="note-date">PRODUCT DEVELOPMENT</span>
-    <h2>アイデアを製品に近づけるときに考えていること</h2>
-    <p>思いつきのままでは商品にならないアイデアを、使う人、売る場所、作り方の条件から整理していく過程について。</p>
-  </article>
-  <article class="note-card">
-    <span class="note-date">DESIGN / ENGINEERING</span>
-    <h2>デザインと設計のあいだで起きる判断</h2>
-    <p>見た目の良さだけでなく、材料、構造、コスト、量産性まで含めてデザインを成立させるための考え方について。</p>
-  </article>
-  <article class="note-card">
-    <span class="note-date">MANUFACTURING</span>
-    <h2>試作から量産へ進むときに見ていること</h2>
-    <p>試作品で見えてくる課題をどう整理し、量産に向けてどこを調整していくのか。現場での確認ポイントについて。</p>
-  </article>
+<nav class="note-tabs" aria-label="NOTE categories">
+  <a class="is-active" href="#">すべて</a>
+  <a href="#">商品開発</a>
+  <a href="#">デザイン</a>
+  <a href="#">量産</a>
+</nav>
+
+<div class="note-layout">
+  <section class="note-feed" aria-label="記事一覧">
+    <article class="note-post">
+      <div>
+        <p class="note-post__tag">PRODUCT DEVELOPMENT</p>
+        <h2>アイデアを製品に近づけるときに考えていること</h2>
+        <p>思いつきのままでは商品にならないアイデアを、使う人、売る場所、作り方の条件から整理していく過程について。</p>
+      </div>
+      <div class="note-post__thumb">NOTE</div>
+    </article>
+    <article class="note-post">
+      <div>
+        <p class="note-post__tag">DESIGN / ENGINEERING</p>
+        <h2>デザインと設計のあいだで起きる判断</h2>
+        <p>見た目の良さだけでなく、材料、構造、コスト、量産性まで含めてデザインを成立させるための考え方について。</p>
+      </div>
+      <div class="note-post__thumb">NOTE</div>
+    </article>
+    <article class="note-post">
+      <div>
+        <p class="note-post__tag">MANUFACTURING</p>
+        <h2>試作から量産へ進むときに見ていること</h2>
+        <p>試作品で見えてくる課題をどう整理し、量産に向けてどこを調整していくのか。現場での確認ポイントについて。</p>
+      </div>
+      <div class="note-post__thumb">NOTE</div>
+    </article>
+  </section>
+
+  <aside class="note-side" aria-label="プロフィール">
+    <section class="side-card">
+      <h2>Profile</h2>
+      <p>TSDESIGN代表。アイデア整理、プロダクトデザイン、製品設計、試作、量産立ち上げ、メーカー化支援まで、商品開発を横断して支援しています。</p>
+    </section>
+    <section class="side-card">
+      <h2>Theme</h2>
+      <ul class="side-list">
+        <li>商品企画</li>
+        <li>プロダクトデザイン</li>
+        <li>製品設計</li>
+        <li>試作・量産</li>
+      </ul>
+    </section>
+  </aside>
 </div>
 </main>
 <script data-mobile-menu-script>
