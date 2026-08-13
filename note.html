@@ -11,13 +11,10 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
 .note-wrap{max-width:1180px;margin:0 auto;padding:100px 32px 120px;}
 .note-title{font-size:64px;line-height:1;margin:0 0 36px;letter-spacing:.03em;}
 .note-lead{font-size:18px;line-height:2;color:#5e645d;max-width:980px;margin:0 0 54px;font-weight:600;}
-.note-tabs{display:flex;gap:26px;border-bottom:1px solid #dfe5dc;margin:0 0 34px;padding:0 4px;}
-.note-tabs a{padding:14px 0 13px;font-size:13px;font-weight:800;letter-spacing:.12em;color:#5e645d;}
-.note-tabs a.is-active{color:#111815;border-bottom:2px solid #79bc3d;}
 .note-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;align-items:start;}
 .note-feed{display:grid;gap:16px;}
 .note-post{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:24px;box-shadow:0 8px 24px rgba(0,0,0,.035);}
-.note-post__tag{margin:0 0 12px;color:#79bc3d;font-size:12px;font-weight:800;letter-spacing:.14em;}
+.note-post__date{margin:0 0 12px;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.08em;}
 .note-post h2{font-size:25px;line-height:1.45;margin:0 0 10px;}
 .note-post p{margin:0;color:#5e645d;font-size:14px;line-height:1.9;}
 .note-post__thumb{border-radius:14px;background:#edf5e7;min-height:112px;display:flex;align-items:center;justify-content:center;color:#79bc3d;font-size:13px;font-weight:800;letter-spacing:.14em;}
@@ -25,10 +22,8 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
 .side-card{background:#fff;border:1px solid #e3e8df;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.03);}
 .side-card h2{font-size:18px;margin:0 0 12px;}
 .side-card p{margin:0;color:#5e645d;font-size:14px;line-height:1.9;}
-.side-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;color:#5e645d;font-size:14px;}
-.side-list li:before{content:"・";color:#ef6c00;margin-right:4px;}
 @media(max-width:900px){.note-layout{grid-template-columns:1fr;}.note-post{grid-template-columns:1fr;}.note-post__thumb{min-height:90px;}.note-side{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:640px){.note-wrap{padding:64px 20px 88px;}.note-title{font-size:44px;margin-bottom:24px;}.note-lead{font-size:16px;margin-bottom:38px;}.note-tabs{gap:20px;overflow-x:auto;}.note-post{padding:22px 20px;border-radius:16px;gap:18px;}.note-post h2{font-size:21px;}.note-side{grid-template-columns:1fr;}}
+@media(max-width:640px){.note-wrap{padding:64px 20px 88px;}.note-title{font-size:44px;margin-bottom:24px;}.note-lead{font-size:16px;margin-bottom:38px;}.note-post{padding:22px 20px;border-radius:16px;gap:18px;}.note-post h2{font-size:21px;}.note-side{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -52,18 +47,11 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
 <h1 class="note-title">NOTE</h1>
 <p class="note-lead">商品開発の現場で考えたこと、うまくいったこと、迷ったこと。実際の経験をもとに、ものづくりの視点を記録していきます。</p>
 
-<nav class="note-tabs" aria-label="NOTE categories">
-  <a class="is-active" href="#">すべて</a>
-  <a href="#">商品開発</a>
-  <a href="#">デザイン</a>
-  <a href="#">量産</a>
-</nav>
-
 <div class="note-layout">
   <section class="note-feed" aria-label="記事一覧">
     <article class="note-post">
       <div>
-        <p class="note-post__tag">PRODUCT DEVELOPMENT</p>
+        <p class="note-post__date">2026.08.08</p>
         <h2>アイデアを製品に近づけるときに考えていること</h2>
         <p>思いつきのままでは商品にならないアイデアを、使う人、売る場所、作り方の条件から整理していく過程について。</p>
       </div>
@@ -71,7 +59,7 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
     </article>
     <article class="note-post">
       <div>
-        <p class="note-post__tag">DESIGN / ENGINEERING</p>
+        <p class="note-post__date">2026.08.08</p>
         <h2>デザインと設計のあいだで起きる判断</h2>
         <p>見た目の良さだけでなく、材料、構造、コスト、量産性まで含めてデザインを成立させるための考え方について。</p>
       </div>
@@ -79,7 +67,7 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
     </article>
     <article class="note-post">
       <div>
-        <p class="note-post__tag">MANUFACTURING</p>
+        <p class="note-post__date">2026.08.08</p>
         <h2>試作から量産へ進むときに見ていること</h2>
         <p>試作品で見えてくる課題をどう整理し、量産に向けてどこを調整していくのか。現場での確認ポイントについて。</p>
       </div>
@@ -91,15 +79,6 @@ body{margin:0;background:#f4f5f1;color:#111815;font-family:-apple-system,BlinkMa
     <section class="side-card">
       <h2>Profile</h2>
       <p>TSDESIGN代表。アイデア整理、プロダクトデザイン、製品設計、試作、量産立ち上げ、メーカー化支援まで、商品開発を横断して支援しています。</p>
-    </section>
-    <section class="side-card">
-      <h2>Theme</h2>
-      <ul class="side-list">
-        <li>商品企画</li>
-        <li>プロダクトデザイン</li>
-        <li>製品設計</li>
-        <li>試作・量産</li>
-      </ul>
     </section>
   </aside>
 </div>
