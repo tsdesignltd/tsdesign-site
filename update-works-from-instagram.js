@@ -229,7 +229,7 @@ body{margin:0;background:#f4f5f1;font-family:-apple-system,BlinkMacSystemFont,"H
 <a href="about.html">ABOUT</a>
 <a href="service.html">SERVICE</a>
 <a href="works.html">WORKS</a>
-<a href="flow.html">FLOW</a>
+<a href="flow.html">NOTE</a>
 <a href="profile.html">PROFILE</a>
 <a class="nav-contact" href="contact.html">CONTACT</a>
 </nav>
@@ -373,7 +373,7 @@ body{margin:0;background:#f4f5f1;font-family:-apple-system,BlinkMacSystemFont,"H
 <a href="about.html">ABOUT</a>
 <a href="service.html">SERVICE</a>
 <a href="works.html">WORKS</a>
-<a href="flow.html">FLOW</a>
+<a href="flow.html">NOTE</a>
 <a href="profile.html">PROFILE</a>
 <a class="nav-contact" href="contact.html">CONTACT</a>
 </nav>
@@ -435,7 +435,7 @@ function updateIndexWorks(posts) {
   const indexPath = path.join(ROOT, 'index.html');
   if (!fs.existsSync(indexPath)) return;
   const html = fs.readFileSync(indexPath, 'utf8');
-  const next = html.replace(/  <section class="section top-works" id="works">[\s\S]*?  <\/section>\n\n  <section class="section flow" id="flow">/, renderTopWorksSection(posts) + '\n\n  <section class="section flow" id="flow">');
+  const next = html.replace(/  <section class="section top-works" id="works">[\s\S]*?  <\/section>\n\n  <section class="section flow" id="note">/, renderTopWorksSection(posts) + '\n\n  <section class="section flow" id="note">');
   if (next !== html) fs.writeFileSync(indexPath, next);
 }
 
