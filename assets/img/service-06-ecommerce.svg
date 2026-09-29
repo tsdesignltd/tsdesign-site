@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="400" height="240" fill="#f0f4eb"/>
+  <rect x="44" y="32" width="312" height="176" rx="16" fill="#fff" stroke="#d8e5cc" stroke-width="2"/>
+  <path d="M44 62h312" stroke="#d8e5cc" stroke-width="2"/>
+  <circle cx="66" cy="47" r="4" fill="#79bc3d"/>
+  <circle cx="82" cy="47" r="4" fill="#c8d8b8"/>
+  <circle cx="98" cy="47" r="4" fill="#c8d8b8"/>
+  <rect x="68" y="82" width="102" height="86" rx="10" fill="#e8f4d8" stroke="#79bc3d" stroke-width="3"/>
+  <path d="M92 144h54l-6-36H98l-6 36Z" fill="#fff" stroke="#79bc3d" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M104 108c0-10 7-18 15-18s15 8 15 18" stroke="#79bc3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M196 88h112M196 108h78M196 128h94" stroke="#d8e5cc" stroke-width="5" stroke-linecap="round"/>
+  <rect x="196" y="150" width="112" height="32" rx="16" fill="#79bc3d"/>
+  <path d="M242 162h8l5 12h30l7-18h-42M259 180a4 4 0 1 0 0 .1M284 180a4 4 0 1 0 0 .1" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="210" y="174" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="700">BUY</text>
+</svg>
